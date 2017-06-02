@@ -1,0 +1,43 @@
+import facebook4j.Comment;
+import facebook4j.Facebook;
+import facebook4j.FacebookException;
+import facebook4j.FacebookFactory;
+import facebook4j.PagableList;
+import facebook4j.Post;
+import facebook4j.Reading;
+import facebook4j.ResponseList;
+import facebook4j.auth.AccessToken;
+
+public class PostsFromPageExtractor {
+
+/**
+ * A simple Facebook4J client which
+ * illustrates how to access group feeds / posts / comments.
+ * 
+ * @param args
+ * @throws FacebookException 
+ */
+public static void main(String[] args) throws FacebookException {
+
+    // Generate facebook instance.
+    Facebook facebook = new FacebookFactory().getInstance();
+    // Use default values for oauth app id.
+    facebook.setOAuthAppId("669705993215028", "8680ca873bb87e00d9aecf514c7d9a04");
+    // Get an access token from: 
+    // https://developers.facebook.com/tools/explorer
+    // Copy and paste it below.
+    String accessTokenString = "EAACEdEose0cBAOpkQT0H7YgK9S6HtsC0neyWM1I1QGBkR3cEEXXAKAbCFNddGk42ZClLW2ZBxKuCdtjXuCPzlMGX5nrM975IxhAiGWSy6ZA4N1ArZA8hipGp0BAtRtMvuxmvVUemmHSZBS8cLRdpBP93CT8PjlKHYIsimZBZCsM4EJMd3TsFeFpDqHP3uw2jy4ZD";
+    AccessToken at = new AccessToken(accessTokenString);
+    // Set access token.
+    facebook.setOAuthAccessToken(at);
+
+    // We're done.
+    // Access group feeds.
+    // You can get the group ID from:
+    // https://developers.facebook.com/tools/explorer
+
+    // Set limit to 25 feeds.
+    
+    facebook.postStatusMessage("KAMI MAHASISWA UNISBANK");
+        }           
+    }
